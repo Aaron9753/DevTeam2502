@@ -1,4 +1,6 @@
 using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -15,6 +17,11 @@ public class gamemanager : MonoBehaviour
     [SerializeField] TextMeshProUGUI enemyCountText;
     [SerializeField] TMP_Text ammoText;
 
+    [Header("----- Interaction UI -----")]
+    [SerializeField] GameObject interactionPromptPanel;
+    [SerializeField] TextMeshProUGUI interactionPromptText;
+    [SerializeField] float promptDisplayTime = 3f;
+
     public Image playerHPBar;
     public Image playerStaminaBar;
     public GameObject playerDamageScreen;
@@ -24,6 +31,9 @@ public class gamemanager : MonoBehaviour
     public playerController playerScript;
 
     public int totalEnemies;
+
+    private Coroutine promptCoroutine;
+
 
     void Awake()
     {
@@ -106,5 +116,50 @@ public class gamemanager : MonoBehaviour
             ammoText.text += " / ";
             ammoText.text += max.ToString("F0");
         }
+    }
+
+    public void ShowInteractionPrompt(string message)
+    {
+        if (interactionPromptPanel != null && interactionPromptText != null)
+        {
+            interactionPromptText.text = message;
+            interactionPromptPanel.SetActive(true);
+
+            if (promptCoroutine != null && promptDisplayTime > 0)
+            {
+                StopCoroutine(promptCoroutine);
+            }
+
+            // Start a new coroutine to hide the prompt after a delay if not permanent
+            if (promptDisplayTime > 0)
+            {
+                promptCoroutine = StartCoroutine(HidePromptAfterDelay());
+            }
+        }
+    }
+
+    public void HideInteractionPrompt()
+    {
+        if (interactionPromptPanel != null)
+        {
+            interactionPromptPanel.SetActive(false);
+
+            // Cancel any existing coroutine
+            if (promptCoroutine != null)
+            {
+                StopCoroutine(promptCoroutine);
+                promptCoroutine = null;
+            }
+        }
+    }
+
+    private IEnumerator HidePromptAfterDelay()
+    {
+        yield return new WaitForSeconds(promptDisplayTime);
+        if (interactionPromptPanel != null)
+        {
+            interactionPromptPanel.SetActive(false);
+        }
+        promptCoroutine = null;
     }
 }
