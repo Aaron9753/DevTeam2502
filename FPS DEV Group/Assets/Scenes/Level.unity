@@ -203671,7 +203671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1cc59bdf6f36f4e823b5d02848aa15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorModel: {fileID: 0}
+  doorModel: {fileID: 8610416615367587280}
   openAngle: 85
   openSpeed: 2
   startLocked: 0
