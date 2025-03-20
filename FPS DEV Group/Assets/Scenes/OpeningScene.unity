@@ -2151,7 +2151,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1828502059}
   - {fileID: 972042057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2672,11 +2671,6 @@ MonoBehaviour:
 --- !u!82 &1828502058 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 3163192537752536414, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
-  m_PrefabInstance: {fileID: 8681243272508845142}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1828502059 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
   m_PrefabInstance: {fileID: 8681243272508845142}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1828502064
@@ -165695,7 +165689,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1434650619}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1632377955569084276, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: aud
@@ -165803,15 +165797,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -474.2
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -282.174
+      value: 0.158
       objectReference: {fileID: 0}
     - target: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -49.88
+      value: -39.8
       objectReference: {fileID: 0}
     - target: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: m_LocalRotation.w
@@ -166457,6 +166451,7 @@ SceneRoots:
   - {fileID: 8601886773667192930}
   - {fileID: 511951727}
   - {fileID: 1446595563}
+  - {fileID: 8681243272508845142}
   - {fileID: 1434650619}
   - {fileID: 1507618686}
   - {fileID: 800220502}
