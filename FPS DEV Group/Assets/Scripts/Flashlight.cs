@@ -37,7 +37,7 @@ public class Flashlight : MonoBehaviour
         }
 
         // Adjust flashlight intensity based on remaining battery life (optional)
-        flashlight.intensity = Mathf.Lerp(0.1f, 1f, batteryLife / 100f);
+        // flashlight.intensity = Mathf.Lerp(0.1f, 1f, batteryLife / 100f);
     }
 
     // Toggle the flashlight on or off

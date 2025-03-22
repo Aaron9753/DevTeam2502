@@ -24,6 +24,7 @@ public class gamemanager : MonoBehaviour
 
     public Image playerHPBar;
     public Image playerStaminaBar;
+    public Image playerFlashlightBatteryBar;
     public GameObject playerDamageScreen;
     public GameObject playerRestoreScreen;
     public bool isPaused;

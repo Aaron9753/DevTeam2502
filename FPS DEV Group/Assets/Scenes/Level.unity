@@ -7938,7 +7938,7 @@ MonoBehaviour:
   flashlight: {fileID: 956031218}
   toggleKey: 102
   batteryLife: 100
-  batteryDrainRate: 1
+  batteryDrainRate: 5
   batteryRechargeRate: 10
 --- !u!114 &956031221
 MonoBehaviour:
@@ -7947,15 +7947,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956031216}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f13de40a2d7d844bb33c8aef24d8138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryFill: {fileID: 403074940}
+  batteryFill: {fileID: 90211803}
   maxBattery: 100
   currentBattery: 100
-  batteryDrainRate: 0.5
+  batteryDrainRate: 5
 --- !u!114 &963869116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19934,6 +19934,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target Reticle
       objectReference: {fileID: 0}
+    - target: {fileID: 618194612348039841, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
+      propertyPath: enemyCountText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 618194612348039841, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
+      propertyPath: playerFlashlightBatteryBar
+      value: 
+      objectReference: {fileID: 90211803}
     - target: {fileID: 961509785005851708, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -19949,6 +19957,10 @@ PrefabInstance:
     - target: {fileID: 6769862212869694689, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -207.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829963780588834378, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
+      propertyPath: enemyCountText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8439711411801395663, guid: eb1e5a364e00ba44aafef1f8ba75b4e3, type: 3}
       propertyPath: m_Pivot.x
@@ -183528,6 +183540,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Intensity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_SpotAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 380364284152515451, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1632377955569084276, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: audHurtVol
       value: 0.2
@@ -183594,6 +183654,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030793411960626347, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414987971325304768, guid: 4e48c41170a9eed4d95462a164bac675, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
