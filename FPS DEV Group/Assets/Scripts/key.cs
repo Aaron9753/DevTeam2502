@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 public class key : MonoBehaviour
 {
+
     [Header("----- Key Settings -----")]
     [Tooltip("Unique identifier that must match a door's keyID to unlock it")]
     [SerializeField] string keyID;
